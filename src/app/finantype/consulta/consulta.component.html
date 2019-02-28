@@ -1,0 +1,22 @@
+<h3>{{titulo}}</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>Nome</th>
+            <th>Fator (%)</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let finanType of finanTypes; let i = index;">
+            <td>{{ finanType.type }}</td>
+            <td>{{ finanType.name }}</td>
+            <td>{{ finanType.factor }}</td>
+            <td><a (click)="edit(finanType.id);">Editar</a></td>
+            <td><a (click)="delete(finanType.id, i);">Excluir</a></td>
+        </tr>
+    </tbody>
+</table>

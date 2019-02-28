@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-12">
+        <form novalidate name="form" class="row" ng-submit="salvar()">
+            <div class="col-md-12" flex>
+                <div class="form-group">
+                    <label>Tipo Financiamento</label>
+                    <select class="form-control" name="finantype" ng-model="finan.finantype" ng-change='changeFinanType()'
+                        ng-options="finanType._id as (finanType.name | uppercase) for finanType in finanTypes" required>
+                        <option value="">Selecione Tipo Financiamento</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Valor</label>
+                    <input type="input" name="value" ng-model="finan.value" required />
+                </div>
+                <div class="form-group">
+                    <label>Nº mensalidades</label>
+                    <select class="form-control" name="amount" ng-model="finan.amount" ng-options="amounts" required>
+                        <option value="">Selecione o número de mensalidades</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Valor da Parcela</label>
+                    <input type="input" name="quota" ng-model="finan.quota" />
+                </div>
+                <div class="form-group" flex>
+                    <label>Nome</label>
+                    <input type="input" name="name" size="50" ng-model="finan.name" required />
+                </div>
+                <div class="form-group">
+                    <label>Contacto</label>
+                    <input type="input" name="contacto" size="50" ng-model="finan.contacto" required />
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary" ng-click="calcAmount()">Calcular</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

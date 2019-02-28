@@ -1,0 +1,25 @@
+<h3>{{titulo}}</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Tipo Financiamento</th>
+            <th>Valor</th>
+            <th>Nº mensalidades</th>
+            <th>Parcela</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let finan of finans; let i = index;">
+            <td>{{ finan.finantype.name }}</td>
+            <td>{{ finan.value }}</td>
+            <td>{{ finan.amount }}</td>
+            <td>{{ finan.quota }}</td>
+            <td><a (click)="edit(finan.id);">Editar</a></td>
+            <td><a (click)="delete(finan.id, i);">Excluir</a></td>
+        </tr>
+    </tbody>
+</table>

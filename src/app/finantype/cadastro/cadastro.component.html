@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-12">
+        <form novalidate name="form" class="row" ng-submit="salvar()">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <h3>{{titulo}}</h3>
+                </div>
+                <div class="form-group">
+                    <label>Tipo</label>
+                    <input type="input" name="type" ng-model="finanType.type" />
+                </div>
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="input" name="name" ng-model="finanType.name" />
+                </div>
+                <div class="form-group">
+                    <label>Fator (%)</label>
+                    <input type="input" name="factor" ng-model="finanType.factor" />
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
